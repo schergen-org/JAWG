@@ -1,0 +1,66 @@
+{
+    "title": "test",
+    "icon": "icon",
+    "theme": {
+        "primary": "#12345",
+        "secondary": "#12455",
+        "background": "#124124"
+    },
+    "content": [
+        {
+            "About": {
+                "blockType": "Text",
+                "content": [
+                    {
+                        "Text": "Text 12"
+                    }
+                ]
+            }
+        },
+        {
+            "Projects": {
+                "blockType": "Project",
+                "content": [
+                    {
+                        "title": "Project 1",
+                        "description": "Description 1",
+                        "link": "https://www.google.com",
+                        "tags": [
+                            "php",
+                            "java"
+                        ]
+                    },
+                    {
+                        "title": "Project 2",
+                        "description": "Description 2",
+                        "link": "https://www.google.com",
+                        "tags": [
+                            "html",
+                            "cpp"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "Experience": {
+                "blockType": "Experience",
+                "content": [
+                    {
+                        "title": "Project 1",
+                        "description": "Description 1",
+                        "startDate": "12-09-2024",
+                        "endDate": "13-12-2025",
+                        "tags": [
+                            "php",
+                            "java"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "impressum": {
+        "text": "Text for impressum"
+    }
+}

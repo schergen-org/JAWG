@@ -1,10 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
     const [count, setCount] = useState(0)
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+        try {
+            const response = await fetch('/json/content.json');
+            if (!response.ok) {
+            throw new Error('Datei nicht gefunden');
+            }
+            const json = await response.json();
+            setData(json);
+        } catch (error) {
+            console.error('Fehler beim Laden der JSON-Datei:', error);
+            setData(null);
+        }
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <>
@@ -28,6 +47,11 @@ function App() {
             <p className="read-the-docs">
         Click on the Vite and React logos to learn more
             </p>
+
+            <div>
+                <h1>JSON Viewer</h1>
+                <pre>{data ? JSON.stringify(data, null, 2) : 'Keine Daten verfügbar'}</pre>
+            </div>
         </>
     )
 }
