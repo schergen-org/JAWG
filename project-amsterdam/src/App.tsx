@@ -3,27 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Schema } from './types/Schema'
+import { loadJsonData } from './services/loadJsonService'
 
 function App() {
     const [count, setCount] = useState(0)
     const [data, setData] = useState<Schema | null>(null);
 
     useEffect(() => {
-        const fetchData = async () => {
-        try {
-            const response = await fetch('/json/content.json');
-            if (!response.ok) {
-            throw new Error('Datei nicht gefunden');
-            }
-            const json:Schema = await response.json();
-            setData(json);
-        } catch (error) {
-            console.error('Fehler beim Laden der JSON-Datei:', error);
-            setData(null);
-        }
-        };
-
-        fetchData();
+        loadJsonData().then(setData)
     }, []);
 
     return (
