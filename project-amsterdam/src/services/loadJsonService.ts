@@ -1,6 +1,8 @@
+import { Schema } from "../types/Schema";
+
 const jsonFilePath = '/json/content.json';
 
-export const loadJsonData = async () => {
+export const loadJsonData = async ():Promise<Schema | null> => {
     try {
         const response = await fetch(jsonFilePath);
         if (!response.ok) {
