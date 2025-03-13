@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Schema } from './types/Schema'
 
 function App() {
     const [count, setCount] = useState(0)
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<Schema | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -14,7 +15,7 @@ function App() {
             if (!response.ok) {
             throw new Error('Datei nicht gefunden');
             }
-            const json = await response.json();
+            const json:Schema = await response.json();
             setData(json);
         } catch (error) {
             console.error('Fehler beim Laden der JSON-Datei:', error);
