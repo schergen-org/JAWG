@@ -30,6 +30,26 @@
 </div>
 
 
+<!-- About the Project -->
+## About The Project
+<!--
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+-->
+
+
+### Built With
+
+* [![React][React]][React-url]
+* [![Mantine][Mantine]][Mantine-url]
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- Links & Shields -->
 [contributors-shield]: https://img.shields.io/github/contributors/schergen-org/JAWG.svg?style=for-the-badge
@@ -40,3 +60,9 @@
 [issues-url]: https://github.com/schergen-org/JAWG/issues
 [license-shield]: https://img.shields.io/github/license/schergen-org/JAWG.svg?style=for-the-badge
 [license-url]: https://github.com/schergen-org/JAWG/blob/master/LICENSE.txt
+
+[React]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://react.dev/
+[Mantine]: https://img.shields.io/badge/Mantine-20232A?style=for-the-badge&logo=mantine&logoColor=5496ff
+[Mantine-url]: https://mantine.dev/
+
