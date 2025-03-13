@@ -59,7 +59,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 [issues-shield]: https://img.shields.io/github/issues/schergen-org/JAWG.svg?style=for-the-badge
 [issues-url]: https://github.com/schergen-org/JAWG/issues
 [license-shield]: https://img.shields.io/github/license/schergen-org/JAWG.svg?style=for-the-badge
-[license-url]: https://github.com/schergen-org/JAWG/blob/master/LICENSE.txt
+[license-url]: https://github.com/schergen-org/JAWG/blob/master/LICENSE
 
 [React]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://react.dev/
