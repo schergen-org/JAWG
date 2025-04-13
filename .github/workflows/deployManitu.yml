@@ -31,5 +31,5 @@ jobs:
         server: ngcobalt440.manitu.net
         username: ${{ secrets.MANITU_FTP_USER }}
         password: ${{ secrets.MANITU_FTP_SECRET }}
-        local-dir: ./dist/
+        local-dir: .project-amsterdam/dist/
         server-dir: web/schergen.org/
