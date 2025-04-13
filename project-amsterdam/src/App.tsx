@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { Schema } from './types/Schema'
 import { loadJsonData } from './services/loadJsonService'
-import BlockBuilder from './components/blocks-builder/blockBuilder';
+import BlockBuilder from './components/builders/blockBuilder';
 
 function App() {
     const [data, setData] = useState<Schema | null>(null);
