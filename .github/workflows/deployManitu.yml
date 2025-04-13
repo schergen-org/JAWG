@@ -1,8 +1,10 @@
 name: Deploy website to Manitu on push
 on: 
   push:
-    tags: '*' 
-    branches: main
+    tags: 
+      - '*' 
+    branches: 
+      - main
     
 jobs:
   web-deploy:
@@ -19,6 +21,7 @@ jobs:
       
     - name: Build Project
       run: |
+        cd project-amsterdam
         npm install
         npm run build
     
