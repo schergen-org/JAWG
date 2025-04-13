@@ -1,11 +1,11 @@
-import { ExperienceBlock } from "./blocks/ExperienceBlock";
-import { ProjectBlock } from "./blocks/ProjectBlock";
-import { TextBlock } from "./blocks/TextBlock";
+import { ExperienceBlock } from './blocks/ExperienceBlock';
+import { ProjectBlock } from './blocks/ProjectBlock';
+import { TextBlock } from './blocks/TextBlock';
 
 export interface Schema {
     title: string;
     icon: string;
-    theme?: Object;
+    theme?: object;
     content: ContentBlock[];
     impressum?: {
         text: string;

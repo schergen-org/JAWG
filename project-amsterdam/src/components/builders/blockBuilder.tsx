@@ -10,14 +10,14 @@ export default function BlockBuilder({ blocks }: blockBuilderProps) {
             {
                 blocks.map((block) => {
                     return (<div
-                    key={block.title}
+                        key={block.title}
                     >
                         <h2>
                             {block.title}
                         </h2>
-                        {block.blockType === "Text" &&
+                        {block.blockType === 'Text' &&
                             <Text 
-                                content={block.content as contentType["Text"]}                          
+                                content={block.content as contentType['Text']}                          
                             />
                         }
                     </div>)
