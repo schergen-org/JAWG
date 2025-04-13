@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import './text.css'
 import { TextBlock } from '../../../types/blocks/TextBlock'
 
