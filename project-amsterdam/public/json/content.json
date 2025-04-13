@@ -8,56 +8,51 @@
     },
     "content": [
         {
-            "About": {
-                "blockType": "Text",
-                "content": [
-                    {
-                        "Text": "Text 12"
-                    }
-                ]
+            "title": "About",
+            "blockType": "Text",
+            "content": {
+                "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
             }
         },
         {
-            "Projects": {
-                "blockType": "Project",
-                "content": [
-                    {
-                        "title": "Project 1",
-                        "description": "Description 1",
-                        "link": "https://www.google.com",
-                        "tags": [
-                            "php",
-                            "java"
-                        ]
-                    },
-                    {
-                        "title": "Project 2",
-                        "description": "Description 2",
-                        "link": "https://www.google.com",
-                        "tags": [
-                            "html",
-                            "cpp"
-                        ]
-                    }
-                ]
-            }
+            "title": "Projects",
+            "blockType": "Project",
+            "content": [
+                {
+                    "title": "Project 1",
+                    "description": "Description 1",
+                    "link": "https://www.google.com",
+                    "tags": [
+                        "php",
+                        "java"
+                    ]
+                },
+                {
+                    "title": "Project 2",
+                    "description": "Description 2",
+                    "link": "https://www.google.com",
+                    "tags": [
+                        "html",
+                        "cpp"
+                    ]
+                }
+            ]
         },
         {
-            "Experience": {
-                "blockType": "Experience",
-                "content": [
-                    {
-                        "title": "Project 1",
-                        "description": "Description 1",
-                        "startDate": "12-09-2024",
-                        "endDate": "13-12-2025",
-                        "tags": [
-                            "php",
-                            "java"
-                        ]
-                    }
-                ]
-            }
+            "title": "Experience",
+            "blockType": "Experience",
+            "content": [
+                {
+                    "title": "Project 1",
+                    "description": "Description 1",
+                    "startDate": "12-09-2024",
+                    "endDate": "13-12-2025",
+                    "tags": [
+                        "php",
+                        "java"
+                    ]
+                }
+            ]
         }
     ],
     "impressum": {
