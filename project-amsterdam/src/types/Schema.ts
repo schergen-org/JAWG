@@ -13,9 +13,16 @@ export interface Schema {
 }
 
 // ContentBlock containing the sections title and defining its content
-type ContentBlock = {
-    [title:string] : {
-        blockType: string;
-        content: TextBlock | ProjectBlock[] | ExperienceBlock[];
-    }
+export type ContentBlock = {
+    title: string;
+    blockType: BlockTypes;
+    content: contentType[BlockTypes] 
+}
+
+export type BlockTypes = keyof contentType
+
+export type contentType = {
+    Text: TextBlock;
+    Project: ProjectBlock[];
+    Experience: ExperienceBlock[];
 }
