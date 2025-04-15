@@ -1,4 +1,4 @@
-import { Schema } from "../types/Schema";
+import { Schema } from '../types/Schema';
 
 const jsonFilePath = '/json/content.json';
 

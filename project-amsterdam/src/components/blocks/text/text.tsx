@@ -1,8 +1,15 @@
-import React from 'react'
 import './text.css'
+import { TextBlock } from '../../../types/blocks/TextBlock'
 
-export default function text() {
+type textProps = {
+  content: TextBlock,
+  title: string
+}
+export default function Text({ content, title }: textProps) {
   return (
-    <div>text</div>
+    <>
+      <h2>{title}</h2>
+      <div>{content.text}</div>
+    </>
   )
 }
