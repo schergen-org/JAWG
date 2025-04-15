@@ -8,17 +8,15 @@ export default function BlockBuilder({ blocks }: blockBuilderProps) {
   return (
     <>
       {
-        blocks.map((block) => {
+        blocks.map((block: ContentBlock, index: number) => {
           return (
             <div
-              key={block.title}
+              key={index}
             >
-              <h2>
-                {block.title}
-              </h2>
               {block.blockType === Blocks.TEXT &&
                 <Text
                   content={block.content as contentType[Blocks.TEXT]}
+                  title={block.title}
                 />
               }
             </div>
