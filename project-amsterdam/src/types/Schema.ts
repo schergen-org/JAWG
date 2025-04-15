@@ -22,7 +22,13 @@ export type ContentBlock = {
 export type BlockTypes = keyof contentType
 
 export type contentType = {
-    Text: TextBlock;
-    Project: ProjectBlock[];
-    Experience: ExperienceBlock[];
+    [Blocks.TEXT]: TextBlock;
+    [Blocks.PROJECT]: ProjectBlock[];
+    [Blocks.EXPERIENCE]: ExperienceBlock[];
+}
+
+export enum Blocks {
+    TEXT = "Text",
+    PROJECT = "Project",
+    EXPERIENCE = "Experience"
 }

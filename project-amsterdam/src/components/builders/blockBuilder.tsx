@@ -1,4 +1,4 @@
-import { ContentBlock, contentType } from '../../types/Schema';
+import { Blocks, ContentBlock, contentType } from '../../types/Schema';
 import Text from '../blocks/text/text'
 
 type blockBuilderProps = {
@@ -16,9 +16,9 @@ export default function BlockBuilder({ blocks }: blockBuilderProps) {
               <h2>
                 {block.title}
               </h2>
-              {block.blockType === 'Text' &&
+              {block.blockType === Blocks.TEXT &&
                 <Text
-                  content={block.content as contentType['Text']}
+                  content={block.content as contentType[Blocks.TEXT]}
                 />
               }
             </div>
