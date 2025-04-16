@@ -47,13 +47,14 @@
                     "blockType": "Experience",
                     "content": [
                         {
-                            "title": "Project 1",
+                            "title": "Experience 1",
                             "description": "Description 1",
                             "startDate": "12-09-2024",
                             "endDate": "13-12-2025",
                             "tags": [
                                 "php",
-                                "java"
+                                "java",
+                                "Team Lead"
                             ]
                         }
                     ]

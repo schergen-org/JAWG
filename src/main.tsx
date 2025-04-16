@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <MantineProvider>
+        <MantineProvider defaultColorScheme='dark'>
             <BrowserRouter>
                 <App />
             </BrowserRouter>
