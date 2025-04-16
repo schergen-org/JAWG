@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { Schema } from './types/Schema'
 import { loadJsonData } from './services/loadJsonService'
-import BlockBuilder from './components/builders/blockBuilder';
+import RouterSwitcher from './components/routerSwitcher';
 
 function App() {
     const [data, setData] = useState<Schema | null>(null);
@@ -15,8 +15,8 @@ function App() {
     return (
         <>
             <div>
-                <BlockBuilder
-                    blocks={data?.content ?? []}
+                <RouterSwitcher
+                    pages={data?.pages ?? []}
                 />
                 {/* <h1>JSON Viewer</h1>
                 <pre>{data ? JSON.stringify(data, null, 2) : 'Keine Daten verfügbar'}</pre> */}

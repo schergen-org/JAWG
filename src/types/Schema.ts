@@ -6,10 +6,16 @@ export interface Schema {
     title: string;
     icon: string;
     theme?: object;
-    content: ContentBlock[];
+    pages: Page[];
     impressum?: {
         text: string;
     }
+}
+
+export type Page = {
+    title: string;
+    route: string;
+    content: ContentBlock[];
 }
 
 // ContentBlock containing the sections title and defining its content
