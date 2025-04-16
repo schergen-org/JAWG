@@ -28,7 +28,7 @@ export type contentType = {
 }
 
 export enum Blocks {
-    TEXT = "Text",
-    PROJECT = "Project",
-    EXPERIENCE = "Experience"
+    TEXT = 'Text',
+    PROJECT = 'Project',
+    EXPERIENCE = 'Experience'
 }

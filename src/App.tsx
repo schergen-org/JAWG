@@ -1,3 +1,4 @@
+import '@mantine/core/styles.css';
 import { useEffect, useState } from 'react'
 import './App.css'
 import { Schema } from './types/Schema'
