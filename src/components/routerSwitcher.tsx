@@ -14,7 +14,7 @@ export  default function RouterSwitcher({ pages }: routeSwitcherProps) {
                     <NavLink
                         key={index}
                         label={page.title}
-                        href={"/" + page.route}
+                        href={'/' + page.route}
                     />
                 )
             })}
