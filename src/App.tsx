@@ -18,8 +18,8 @@ function App() {
                 <BlockBuilder
                     blocks={data?.content ?? []}
                 />
-                <h1>JSON Viewer</h1>
-                <pre>{data ? JSON.stringify(data, null, 2) : 'Keine Daten verfügbar'}</pre>
+                {/* <h1>JSON Viewer</h1>
+                <pre>{data ? JSON.stringify(data, null, 2) : 'Keine Daten verfügbar'}</pre> */}
             </div>
         </>
     )
