@@ -4,6 +4,8 @@ import './App.css'
 import { Schema } from './types/Schema'
 import { loadJsonData } from './services/loadJsonService'
 import RouterSwitcher from './components/routerSwitcher';
+import { AppShell } from '@mantine/core';
+import Header from './components/Header';
 
 function App() {
     const [data, setData] = useState<Schema | null>(null);
@@ -13,15 +15,21 @@ function App() {
     }, []);
 
     return (
-        <>
-            <div>
+        <AppShell
+            header={{ height: 120 }}
+            padding="md"
+        >
+            <AppShell.Header>
+                <Header 
+                    pages={data?.pages ?? []}
+                />
+            </AppShell.Header>
+            <AppShell.Main>
                 <RouterSwitcher
                     pages={data?.pages ?? []}
                 />
-                {/* <h1>JSON Viewer</h1>
-                <pre>{data ? JSON.stringify(data, null, 2) : 'Keine Daten verfügbar'}</pre> */}
-            </div>
-        </>
+            </AppShell.Main>
+        </AppShell>
     )
 }
 
