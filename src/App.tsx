@@ -21,6 +21,7 @@ function App() {
         >
             <AppShell.Header>
                 <Header 
+                    title={data?.title ?? ""}
                     pages={data?.pages ?? []}
                 />
             </AppShell.Header>

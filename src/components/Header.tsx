@@ -5,10 +5,11 @@ import { Link, useLocation } from 'react-router';
 import classes from './Header.module.css';
 
 type headerProps = {
-  pages: Page[];
+    title: string;
+    pages: Page[];
 }
 
-export default function Header({ pages }: headerProps) {
+export default function Header({ title, pages }: headerProps) {
     const location = useLocation();
     const [opened, { toggle }] = useDisclosure(false);
 
@@ -34,7 +35,14 @@ export default function Header({ pages }: headerProps) {
     return (
         <header className={classes.header}>
             <Container className={classes.inner}>
-                <Text>Titel</Text>
+                <Text
+                    size="xl"
+                    fw={900}
+                    variant="gradient"
+                    gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+                >
+                    {title}
+                </Text>
                 <Box className={classes.links} visibleFrom="sm">
                     <Group gap={0} justify="flex-end" className={classes.links}>
                         {items}
