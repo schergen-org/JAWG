@@ -10,10 +10,11 @@ export  default function RouterSwitcher({ pages }: routeSwitcherProps) {
         <Routes>
             <Route path="/" element={
                 (pages.length > 0) && 
-            <BlockBuilder
-                blocks={pages[0].content}
-            />
+                <BlockBuilder
+                    blocks={pages[0].content}
+                />
             }/>
+            
             {pages.map((page, index) => {
                 return (
                     <Route 
