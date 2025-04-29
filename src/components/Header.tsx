@@ -1,37 +1,35 @@
-import { Anchor, Box, Burger, Container, Group, Text } from '@mantine/core';
+import { Box, Burger, Container, Group, Text } from '@mantine/core';
 import { Page } from '../types/Schema';
-import { useState } from 'react';
 import classes from './Header.module.css';
 import { useDisclosure } from '@mantine/hooks';
+import { Link, useLocation } from 'react-router';
 
 type headerProps = {
   pages: Page[];
 }
 
 export default function Header({ pages }: headerProps) {
-    const [active, setActive] = useState(0);
+    const location = useLocation();
     const [opened, { toggle }] = useDisclosure(false);
 
-    const items = pages.map((page, index) => (
-        <Anchor<'a'>
-            href={'/' + page.route}
-            key={page.title}
-            className={classes.link}
-            data-active={index === active || undefined}
-            onClick={(event) => {
-                event.preventDefault();
-                setActive(index);
-            }}
-        >
-            {page.title}
-        </Anchor>
-    ));
+    const items = pages.map((page) => {
+        const isActive = location.pathname === '/' + page.route;
 
+        return (
+            <Link
+                to={'/' + page.route}
+                key={page.title}
+                className={classes.link}
+                data-active={isActive || undefined}
+            >
+                {page.title}
+            </Link>
+        );
+    });
 
     return (
         <header className={classes.header}>
             <Container className={classes.inner}>
-                {/* <MantineLogo size={34} /> */}
                 <Text>Titel</Text>
                 <Box className={classes.links} visibleFrom="sm">
                     <Group gap={0} justify="flex-end" className={classes.links}>
@@ -47,5 +45,5 @@ export default function Header({ pages }: headerProps) {
                 />
             </Container>
         </header>
-    )
+    );
 }
