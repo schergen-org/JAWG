@@ -31,20 +31,20 @@ export default function Header({ pages }: headerProps) {
     return (
         <header className={classes.header}>
             <Container className={classes.inner}>
-            {/* <MantineLogo size={34} /> */}
-            <Text>Titel</Text>
-            <Box className={classes.links} visibleFrom="sm">
-                <Group gap={0} justify="flex-end" className={classes.links}>
-                    {items}
-                </Group>
-            </Box>
-            <Burger
-                opened={opened}
-                onClick={toggle}
-                className={classes.burger}
-                size="sm"
-                hiddenFrom="sm"
-            />
+                {/* <MantineLogo size={34} /> */}
+                <Text>Titel</Text>
+                <Box className={classes.links} visibleFrom="sm">
+                    <Group gap={0} justify="flex-end" className={classes.links}>
+                        {items}
+                    </Group>
+                </Box>
+                <Burger
+                    opened={opened}
+                    onClick={toggle}
+                    className={classes.burger}
+                    size="sm"
+                    hiddenFrom="sm"
+                />
             </Container>
         </header>
     )
