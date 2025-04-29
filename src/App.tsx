@@ -16,7 +16,7 @@ function App() {
 
     return (
         <AppShell
-            header={{ height: 120 }}
+            header={{ height: 85 }}
             padding="md"
         >
             <AppShell.Header>
