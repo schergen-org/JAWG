@@ -16,11 +16,12 @@ function App() {
 
     return (
         <AppShell
-            header={{ height: 120 }}
+            header={{ height: 85 }}
             padding="md"
         >
             <AppShell.Header>
                 <Header 
+                    title={data?.title ?? ''}
                     pages={data?.pages ?? []}
                 />
             </AppShell.Header>
