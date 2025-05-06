@@ -1,10 +1,12 @@
 import './TextComponent.css'
 import { TextBlock } from '../../../types/blocks/TextBlock'
 import { Paper, Text } from '@mantine/core'
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 type textProps = {
-  content: TextBlock,
-  title: string
+    content: TextBlock,
+    title: string
 }
 export default function TextComponent({ content, title }: textProps) {
     return (
@@ -15,15 +17,17 @@ export default function TextComponent({ content, title }: textProps) {
             p={10}
             m={10}
         >
-            <Text 
+            <Text
                 size="xl"
                 c="blue"
             >
                 {title}
             </Text>
-            <Text>
+            <Markdown
+                remarkPlugins={[remarkGfm]}
+            >
                 {content.text}
-            </Text>
+            </Markdown>
         </Paper>
     )
 }
